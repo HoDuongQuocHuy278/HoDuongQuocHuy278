@@ -11,13 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="background-animation"></div>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="overlay"></div>
 
     <header>
         <nav>
@@ -37,17 +42,24 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <div class="avatar-container">
-                    <img src="https://raw.githubusercontent.com/HoDuongQuocHuy278/HoDuongQuocHuy278/main/avatar.jpg"
-                        alt="Ho Duong Quoc Huy" class="avatar">
-                    <div class="status-badge"><i class="fas fa-code"></i> Coding</div>
+                <div class="avatar-wrapper">
+                    <div class="avatar-container">
+                        <img src="https://raw.githubusercontent.com/HoDuongQuocHuy278/HoDuongQuocHuy278/main/avatar.jpg"
+                            alt="Ho Duong Quoc Huy" class="avatar">
+                        <div class="status-badge glass-small"><i class="fas fa-code"></i> Coding</div>
+                    </div>
                 </div>
-                <h1>Hồ Dương Quốc Huy</h1>
-                <h2 class="typing-text">Full Stack Developer</h2>
+                <h1 class="glitch-text" data-text="Hồ Dương Quốc Huy">Hồ Dương Quốc Huy</h1>
+                <h2 class="typing-text"><span id="typing-element"></span><span class="cursor">|</span></h2>
                 <p class="tagline">"Building real products and improving myself every single day"</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn primary">View Projects</a>
                     <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -58,25 +70,32 @@
                 <div class="line"></div>
             </div>
             <div class="about-container">
-                <div class="about-card glass">
-                    <h3>👤 Thông tin cá nhân</h3>
+                <div class="about-card glass" data-aos="fade-up">
+                    <div class="card-icon"><i class="far fa-user"></i></div>
+                    <h3>Thông tin cá nhân</h3>
                     <ul class="info-list">
                         <li><strong>Họ tên:</strong> Hồ Dương Quốc Huy</li>
                         <li><strong>Ngày sinh:</strong> 27/08/2005</li>
                         <li><strong>Địa chỉ:</strong> Đà Nẵng, Việt Nam</li>
-                        <li><strong>Vai trò:</strong> Full Stack Developer – Mobile Developer</li>
+                        <li><strong>Vai trò:</strong> Full Stack Developer</li>
                     </ul>
                 </div>
-                <div class="about-card glass">
-                    <h3>🎯 Định hướng</h3>
+                <div class="about-card glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon"><i class="far fa-dot-circle"></i></div>
+                    <h3>Định hướng</h3>
                     <ul class="goal-list">
                         <li><i class="fas fa-check-circle"></i> Phát triển hệ thống web/app hoàn chỉnh</li>
                         <li><i class="fas fa-check-circle"></i> Tập trung các dự án thực tế</li>
                         <li><i class="fas fa-check-circle"></i> Học AI để tích hợp vào ứng dụng</li>
                     </ul>
                 </div>
-                <div class="about-card glass code-block">
-                    <h3>🔥 Quick Info</h3>
+                <div class="about-card glass code-block-wrapper" data-aos="fade-up" data-aos-delay="200">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="lang">yaml</span>
+                    </div>
                     <pre><code class="language-yaml">
 name: "Ho Duong Quoc Huy"
 role: "Full Stack Developer"
@@ -97,28 +116,28 @@ motto: "Code to create value"
                 <div class="line"></div>
             </div>
             <div class="tech-grid">
-                <div class="tech-category">
-                    <h3>💻 Frontend</h3>
+                <div class="tech-category glass" data-aos="fade-up">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
                     <div class="tech-items">
-                        <span class="tech-pill">HTML/CSS</span>
-                        <span class="tech-pill">JavaScript</span>
-                        <span class="tech-pill">Vue.js</span>
-                        <span class="tech-pill">React Native</span>
+                        <span class="tech-pill"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tech-pill"><i class="fab fa-vuejs"></i> Vue.js</span>
+                        <span class="tech-pill"><i class="fab fa-react"></i> React Native</span>
                     </div>
                 </div>
-                <div class="tech-category">
-                    <h3>⚙️ Backend</h3>
+                <div class="tech-category glass" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
                     <div class="tech-items">
-                        <span class="tech-pill">Laravel</span>
-                        <span class="tech-pill">Java</span>
-                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill"><i class="fab fa-laravel"></i> Laravel</span>
+                        <span class="tech-pill"><i class="fab fa-java"></i> Java</span>
+                        <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
                     </div>
                 </div>
-                <div class="tech-category">
-                    <h3>🗄️ Database</h3>
+                <div class="tech-category glass" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-database"></i> Database</h3>
                     <div class="tech-items">
-                        <span class="tech-pill">MySQL</span>
-                        <span class="tech-pill">PostgreSQL</span>
+                        <span class="tech-pill"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="tech-pill"><i class="fas fa-server"></i> PostgreSQL</span>
                     </div>
                 </div>
             </div>
@@ -131,14 +150,15 @@ motto: "Code to create value"
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card glass">
+                <div class="project-card glass" data-aos="fade-up">
                     <div class="project-content">
-                        <h3>Second-hand Goods Trading</h3>
+                        <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <h3>Second-hand Goods</h3>
                         <p class="tech-stack-label">Laravel + Vue + MySQL</p>
                         <ul class="project-features">
-                            <li>Đăng sản phẩm & Chat real-time</li>
-                            <li>Thanh toán VNPay</li>
-                            <li>Giỏ hàng & đánh giá</li>
+                            <li><i class="fas fa-check"></i> Đăng sản phẩm & Chat real-time</li>
+                            <li><i class="fas fa-check"></i> Thanh toán VNPay</li>
+                            <li><i class="fas fa-check"></i> Giỏ hàng & đánh giá</li>
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/HoDuongQuocHuy278/Shopee" target="_blank" class="btn small"><i
@@ -148,14 +168,15 @@ motto: "Code to create value"
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card glass">
+                <div class="project-card glass" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-content">
-                        <h3>React Native Store App</h3>
+                        <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>React Native Store</h3>
                         <p class="tech-stack-label">React Native + Laravel API</p>
                         <ul class="project-features">
-                            <li>Đăng nhập / đăng ký</li>
-                            <li>Quản lý cửa hàng & Upload ảnh</li>
-                            <li>Thanh toán</li>
+                            <li><i class="fas fa-check"></i> Đăng nhập / đăng ký</li>
+                            <li><i class="fas fa-check"></i> Quản lý cửa hàng & Upload ảnh</li>
+                            <li><i class="fas fa-check"></i> Thanh toán</li>
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/HoDuongQuocHuy278/React_Native_Store" target="_blank"
@@ -165,14 +186,15 @@ motto: "Code to create value"
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card glass">
+                <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-content">
-                        <h3>Badminton Court Management</h3>
+                        <div class="project-icon"><i class="fas fa-table-tennis"></i></div>
+                        <h3>Badminton Manager</h3>
                         <p class="tech-stack-label">Java + MySQL + Swing UI</p>
                         <ul class="project-features">
-                            <li>Đặt sân theo slot 30 phút</li>
-                            <li>Kiểm tra sân trống</li>
-                            <li>Tính doanh thu</li>
+                            <li><i class="fas fa-check"></i> Đặt sân theo slot 30 phút</li>
+                            <li><i class="fas fa-check"></i> Kiểm tra sân trống</li>
+                            <li><i class="fas fa-check"></i> Tính doanh thu</li>
                         </ul>
                         <div class="project-links">
                             <a href="https://github.com/HoDuongQuocHuy278" target="_blank" class="btn small"><i
@@ -188,14 +210,14 @@ motto: "Code to create value"
                 <h2>GitHub Analytics</h2>
                 <div class="line"></div>
             </div>
-            <div class="stats-container">
-                <img src="https://github-readme-stats.vercel.app/api?username=HoDuongQuocHuy278&show_icons=true&theme=tokyonight&hide_border=true"
+            <div class="stats-container glass">
+                <img src="https://github-readme-stats.vercel.app/api?username=HoDuongQuocHuy278&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000"
                     alt="GitHub Stats">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HoDuongQuocHuy278&layout=compact&theme=tokyonight&hide_border=true"
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=HoDuongQuocHuy278&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000"
                     alt="Top Langs">
             </div>
-            <div class="activity-graph">
-                <img src="https://github-readme-activity-graph.vercel.app/graph?username=HoDuongQuocHuy278&theme=tokyo-night&hide_border=true"
+            <div class="activity-graph glass">
+                <img src="https://github-readme-activity-graph.vercel.app/graph?username=HoDuongQuocHuy278&theme=tokyo-night&hide_border=true&bg_color=00000000"
                     alt="Activity Graph">
             </div>
         </section>
@@ -205,13 +227,21 @@ motto: "Code to create value"
                 <h2>Get In Touch</h2>
                 <div class="line"></div>
             </div>
-            <div class="contact-card glass">
+            <div class="contact-card glass" data-aos="zoom-in">
                 <p>Interested in working together? Let's connect!</p>
-                <footer>
-                    <p>&copy; 2025 Ho Duong Quoc Huy. All rights reserved.</p>
-                </footer>
+                <div class="contact-links">
+                    <a href="mailto:contact@example.com" class="contact-item"><i class="fas fa-envelope"></i> Email Me</a>
+                    <a href="https://github.com/HoDuongQuocHuy278" target="_blank" class="contact-item"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Ho Duong Quoc Huy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
