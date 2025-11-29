@@ -15,6 +15,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-%2312100E.svg?style=for-the-badge&logo=github&logoColor=white&labelColor=black)](https://github.com/HoDuongQuocHuy278)
 [![GitLab](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com/huyho2782005)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23FF5733.svg?style=for-the-badge&logo=safari&logoColor=white)](https://hoduongquochuy278.github.io/Portfolio/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:huyho2782005@gmail.com)
 
 ![Profile Views](https://komarev.com/ghpvc/?username=HoDuongQuocHuy278&color=blueviolet&style=for-the-badge)
